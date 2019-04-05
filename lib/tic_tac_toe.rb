@@ -44,7 +44,7 @@ def current_player(board)
   turn_count(board).even? ? "X" : "O"
 end
 
-f won?(board)
+def won?(board)
   WIN_COMBINATIONS.each do |combination|
     return combination if combination.all? {|i| board[i]=="X"}
     return combination if combination.all? {|i| board[i]=="O"}
